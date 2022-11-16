@@ -15,7 +15,7 @@ new DbInstaller().InstallServices(builder.Services, builder.Configuration);
 new AuthInstaller(builder.Configuration["Jwt:Secret"]).InstallServices(builder.Services, builder.Configuration);
 new ServicesInstaller().InstallServices(builder.Services, builder.Configuration);
 new LogicInstaller().InstallServices(builder.Services, builder.Configuration);
-
+new HostedServiceInstaller().InstallServices(builder.Services, builder.Configuration);
 
 var app = builder.Build();
 // Configure the HTTP request pipeline.

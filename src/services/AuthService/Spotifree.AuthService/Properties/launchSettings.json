@@ -1,26 +1,14 @@
 {
+  "$schema": "https://json.schemastore.org/launchsettings.json",
   "profiles": {
     "Spotifree.AuthService": {
       "commandName": "Project",
-      "launchBrowser": true,
-      "launchUrl": "swagger",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
-        "SPOTIFREE_AUTHSERVICEDB": "Server=spotifree.tplinkdns.com;Initial Catalog=AuthDatabase;User ID=spotifree;Password=543532;encrypt=false;"
+        "SPOTIFREE_AUTHSERVICEDB": "Server=spotifree.tplinkdns.com;Initial Catalog=AuthDatabase;User ID=spotifree;Password=543532;encrypt=false;",
+        "SPOTIFREE_RABBITMQ": "{\"UserName\": \"guest\",\"Password\": \"guest\",\"HostName\": \"localhost\",\"VHost\": \"/\",\"Port\": 5672}"
       },
       "applicationUrl": "https://localhost:51010"
-    },
-    "WSL": {
-      "commandName": "WSL2",
-      "launchBrowser": true,
-      "launchUrl": "https://localhost:51010/swagger",
-      "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development",
-        "ASPNETCORE_URLS": "https://localhost:51010",
-        "SPOTIFREE_AUTHSERVICEDB": "Server=spotifree.tplinkdns.com;Initial Catalog=AuthDatabase;User ID=spotifree;Password=543532;encrypt=false;"
-      },
-      "distributionName": ""
     }
-  },
-  "$schema": "https://json.schemastore.org/launchsettings.json"
+  }
 }
