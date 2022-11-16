@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "pxxX8ShbTUjYmpKfl/dLbrNDpmUk1rIEt3g3GjhJJsE=",
+  "Source": "Spotifree.UserService",
+  "BasePath": "_content/Spotifree.UserService",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

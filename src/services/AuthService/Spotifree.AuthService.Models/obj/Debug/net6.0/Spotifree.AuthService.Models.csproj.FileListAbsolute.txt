@@ -1,0 +1,12 @@
+C:\Users\EmirG\OneDrive\Bureaublad\Spotifree\Authservice\Spotifree.AuthService.Models\bin\Debug\net6.0\Spotifree.AuthService.Models.deps.json
+C:\Users\EmirG\OneDrive\Bureaublad\Spotifree\Authservice\Spotifree.AuthService.Models\bin\Debug\net6.0\Spotifree.AuthService.Models.dll
+C:\Users\EmirG\OneDrive\Bureaublad\Spotifree\Authservice\Spotifree.AuthService.Models\bin\Debug\net6.0\Spotifree.AuthService.Models.pdb
+C:\Users\EmirG\OneDrive\Bureaublad\Spotifree\Authservice\Spotifree.AuthService.Models\obj\Debug\net6.0\Spotifree.AuthService.Models.csproj.AssemblyReference.cache
+C:\Users\EmirG\OneDrive\Bureaublad\Spotifree\Authservice\Spotifree.AuthService.Models\obj\Debug\net6.0\Spotifree.AuthService.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\EmirG\OneDrive\Bureaublad\Spotifree\Authservice\Spotifree.AuthService.Models\obj\Debug\net6.0\Spotifree.AuthService.Models.AssemblyInfoInputs.cache
+C:\Users\EmirG\OneDrive\Bureaublad\Spotifree\Authservice\Spotifree.AuthService.Models\obj\Debug\net6.0\Spotifree.AuthService.Models.AssemblyInfo.cs
+C:\Users\EmirG\OneDrive\Bureaublad\Spotifree\Authservice\Spotifree.AuthService.Models\obj\Debug\net6.0\Spotifree.AuthService.Models.csproj.CoreCompileInputs.cache
+C:\Users\EmirG\OneDrive\Bureaublad\Spotifree\Authservice\Spotifree.AuthService.Models\obj\Debug\net6.0\Spotifree.AuthService.Models.dll
+C:\Users\EmirG\OneDrive\Bureaublad\Spotifree\Authservice\Spotifree.AuthService.Models\obj\Debug\net6.0\refint\Spotifree.AuthService.Models.dll
+C:\Users\EmirG\OneDrive\Bureaublad\Spotifree\Authservice\Spotifree.AuthService.Models\obj\Debug\net6.0\Spotifree.AuthService.Models.pdb
+C:\Users\EmirG\OneDrive\Bureaublad\Spotifree\Authservice\Spotifree.AuthService.Models\obj\Debug\net6.0\ref\Spotifree.AuthService.Models.dll

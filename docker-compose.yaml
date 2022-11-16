@@ -1,0 +1,40 @@
+version: '3.5'
+
+services:
+  fambook-angular:
+    image: fambook-angular-i
+    container_name: fambook-angular
+    build: 
+      context: ./src/Fambook-angular
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+  spotifree-gateway:
+    image: spotifree-gateway:latest
+    container_name: spotifree-gateway
+    build:
+      context: ./src/services/Gateway
+      dockerfile: Dockerfile
+    ports:
+      - "22000:80"
+  spotifree-authservice:
+    image: spotifree-authservice:latest
+    container_name: spotifree-authservice
+    build:
+      context: ./src/services/AuthService
+      dockerfile: Dockerfile
+    ports:
+      - "51010:80"
+    restart: on-failure
+  spotifree-userservice:
+    image: spotifree-userservice:latest
+    container_name: spotifree-userservice
+    build:
+      context: ./src/services/UserService
+      dockerfile: Dockerfile
+    ports:
+      - "51020:80"
+    environment:
+      SPOTIFREE_USERSERVICE_DB: 'Server=tcp:spotifree.tplinkdns.com,1433;Initial Catalog=UserDatabase;Persist Security Info=False;User ID=spotifree;Password=543532;MultipleActiveResultSets=False;Encrypt=False;TrustServerCertificate=False;Connection Timeout=30;'
+      SPOTIFREE_RABBITMQ: '{"UserName": "guest","Password": "guest","HostName": "192.168.0.65","VHost": "/","Port": 5672}'
+    restart: on-failure

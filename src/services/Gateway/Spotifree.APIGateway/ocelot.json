@@ -1,0 +1,75 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/auth/authenticate",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "spotifree-authservice",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/api/auth/authenticate",
+      "UpstreamHttpMethod": [ "Post" ]
+    },
+    {
+      "DownstreamPathTemplate": "/user/create",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "spotifree-userservice",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/api/user/create"
+    },
+    {
+      "DownstreamPathTemplate": "/user/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "spotifree-userservice",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/api/user/{id}",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "AuthKey",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/profile/upload/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "spotifree-userservice",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/api/profile/upload/{id}",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "AuthKey",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/profile/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "spotifree-userservice",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/api/profile/{id}",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "AuthKey",
+        "AllowedScopes": []
+      }
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:22000"
+  }
+}

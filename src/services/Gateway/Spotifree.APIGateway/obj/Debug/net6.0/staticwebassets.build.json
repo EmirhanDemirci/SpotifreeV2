@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "mxmK7XxaiUa5dyhUplIV58DedImlTlOdM52DQBzfwEc=",
+  "Source": "Spotifree.APIGateway",
+  "BasePath": "_content/Spotifree.APIGateway",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "FBVSOXudmCt6zVjlazCkfbQD8d4ho3M1pyqlIIcAF14=",
+  "Source": "Spotifree.AuthService",
+  "BasePath": "_content/Spotifree.AuthService",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
