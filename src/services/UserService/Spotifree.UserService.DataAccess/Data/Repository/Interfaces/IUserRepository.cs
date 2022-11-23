@@ -10,6 +10,6 @@ namespace Spotifree.UserService.DataAccess.Data.Repository.Interfaces
     public interface IUserRepository : IRepository<User>
     {
         void Update(User user);
-        User GetWithProfile(int id);
+        User GetUser(int id);
     }
 }

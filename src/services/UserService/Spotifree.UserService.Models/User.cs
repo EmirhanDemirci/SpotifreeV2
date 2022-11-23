@@ -20,7 +20,5 @@ namespace Spotifree.UserService.Models
 
         [Required]
         public string Birthdate { get; set; }
-
-        public Profile Profile { get; set; }
     }
 }

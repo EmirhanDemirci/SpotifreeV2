@@ -7,7 +7,7 @@
       "dotnetRunMessages": true,
       "launchBrowser": true,
       "environmentVariables": {
-        "SPOTIFREE_USERSERVICE_DB": "Server=tcp:spotifree.tplinkdns.com,1433;Initial Catalog=UserDatabase;Persist Security Info=False;User ID=spotifree;Password=543532;MultipleActiveResultSets=False;Encrypt=False;TrustServerCertificate=False;Connection Timeout=30;",
+        "SPOTIFREE_USERSERVICE_DB": "Server=tcp:fdemirci.tplinkdns.com,1433;Initial Catalog=UserDatabase;Persist Security Info=False;User ID=spotifree;Password=543532;MultipleActiveResultSets=False;Encrypt=False;TrustServerCertificate=False;Connection Timeout=30;",
         "ASPNETCORE_ENVIRONMENT": "Development",
         "SPOTIFREE_RABBITMQ": "{\"UserName\": \"guest\",\"Password\": \"guest\",\"HostName\": \"localhost\",\"VHost\": \"/\",\"Port\": 5672}"
       },

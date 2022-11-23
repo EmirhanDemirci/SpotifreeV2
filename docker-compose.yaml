@@ -35,7 +35,7 @@ services:
     depends_on:
       - spotifree-rabbitmq
     environment:
-      SPOTIFREE_USERSERVICE_DB: 'Server=tcp:spotifree.tplinkdns.com,1433;Initial Catalog=UserDatabase;Persist Security Info=False;User ID=spotifree;Password=543532;MultipleActiveResultSets=False;Encrypt=False;TrustServerCertificate=False;Connection Timeout=30;'
+      SPOTIFREE_USERSERVICE_DB: 'Server=tcp:fdemirci.tplinkdns.com,1433;Initial Catalog=UserDatabase;Persist Security Info=False;User ID=spotifree;Password=543532;MultipleActiveResultSets=False;Encrypt=False;TrustServerCertificate=False;Connection Timeout=30;'
       SPOTIFREE_RABBITMQ: '{"UserName": "guest","Password": "guest","HostName": "spotifree-rabbitmq","VHost": "/","Port": 5672}'
 
   spotifree-rabbitmq:

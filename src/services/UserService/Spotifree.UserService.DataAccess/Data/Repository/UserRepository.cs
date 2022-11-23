@@ -30,13 +30,17 @@ namespace Spotifree.UserService.DataAccess.Data.Repository
 
             _db.SaveChanges();
         }
-
-        public User GetWithProfile(int id)
+        public User GetUser(int id)
         {
-            return _db.User
-                .Where(u => u.Id == id)
-                .Include(u => u.Profile)
-                .FirstOrDefault();
+            return _db.User.Where(u => u.Id == id).FirstOrDefault();
         }
+
+        //public User GetWithProfile(int id)
+        //{
+        //    return _db.User
+        //        .Where(u => u.Id == id)
+        //        .Include(u => u.Profile)
+        //        .FirstOrDefault();
+        //}
     }
 }

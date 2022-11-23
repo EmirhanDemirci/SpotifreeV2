@@ -16,12 +16,12 @@ namespace Spotifree.UserService.Composition.Installer
         public void InstallServices(IServiceCollection services, IConfiguration configuration)
         {
             //debug purposes
-            //services.AddTransient<ApplicationDbContext>()
-            //    .AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException()));
-
             services.AddTransient<ApplicationDbContext>()
-                .AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(
-                Environment.GetEnvironmentVariable("SPOTIFREE_USERSERVICE_DB") ?? throw new InvalidOperationException()));
+                .AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException()));
+
+            //services.AddTransient<ApplicationDbContext>()
+            //    .AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(
+            //    Environment.GetEnvironmentVariable("SPOTIFREE_USERSERVICE_DB") ?? throw new InvalidOperationException()));
         }
     }
 }

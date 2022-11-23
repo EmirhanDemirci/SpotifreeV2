@@ -29,8 +29,7 @@ namespace Spotifree.UserService.Services
             {
                 FirstName = userViewModel.FirstName,
                 LastName = userViewModel.LastName,
-                Birthdate = userViewModel.Birthdate,
-                Profile = new Profile()
+                Birthdate = userViewModel.Birthdate
             };
 
             _unitOfWork.User.Add(user);
@@ -61,12 +60,11 @@ namespace Spotifree.UserService.Services
             if (id == 0)
                 return null;
 
-            var user = _unitOfWork.User.GetWithProfile(id);
+            var user = _unitOfWork.User.GetUser(id);
 
             if (user == null)
                 return null;
 
-            user.Profile.ProfilePicture = null;
             return user;
         }
     }

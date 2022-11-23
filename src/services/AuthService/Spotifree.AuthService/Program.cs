@@ -5,14 +5,15 @@ using Spotifree.AuthService.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
+builder.Services.AddCors();
 builder.Services.AddControllers();
 builder.Services.Configure<Jwt>(builder.Configuration.GetSection("Jwt"));
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddOptions();
-new DbInstaller().InstallServices(builder.Services, builder.Configuration);
 new AuthInstaller(builder.Configuration["Jwt:Secret"]).InstallServices(builder.Services, builder.Configuration);
+new DbInstaller().InstallServices(builder.Services, builder.Configuration);
 new ServicesInstaller().InstallServices(builder.Services, builder.Configuration);
 new LogicInstaller().InstallServices(builder.Services, builder.Configuration);
 new HostedServiceInstaller().InstallServices(builder.Services, builder.Configuration);
@@ -27,6 +28,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseRouting();
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.UseCors(builder => builder
@@ -34,6 +36,9 @@ app.UseCors(builder => builder
     .AllowAnyMethod()
     .AllowAnyHeader());
 
-app.MapControllers();
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllers();
+});
 
 app.Run();

@@ -9,8 +9,5 @@ namespace Spotifree.UserService.Services.Interfaces
 {
     public interface IProfileService
     {
-        Profile Get(int id);
-        void Delete(Profile profile);
-        void Upload(int id, byte[] picture);
     }
 }

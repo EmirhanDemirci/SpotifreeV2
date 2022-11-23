@@ -13,24 +13,25 @@ using System.Text;
 
 
 var builder = WebApplication.CreateBuilder(args);
-builder.Configuration.AddJsonFile("ocelot.json", optional: false, reloadOnChange: true);
-builder.Services.AddControllers();
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
-builder.Services.AddOcelot(builder.Configuration).AddKubernetes();
-
-
 
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("CORSPolicy", builder => builder.AllowAnyMethod().AllowAnyHeader().AllowCredentials().SetIsOriginAllowed((hosts) => true));
 });
+builder.Services.AddControllers();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+builder.Configuration.AddJsonFile("ocelot.json", optional: false, reloadOnChange: true);
+//Support for kubernetes needs to be added here 
+builder.Services.AddOcelot(builder.Configuration);
+
+
+
+
 
 
 
 var authenticationProviderKey = "AuthKey";
-//builder.Services.AddOcelot(configuration);
-
 builder.Services.AddAuthentication(x =>
 {
     x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -57,12 +58,12 @@ app.UseCors("CORSPolicy");
 
 app.UseHttpsRedirection();
 app.UseRouting();
-app.UseOcelot().Wait();
 app.UseAuthorization();
 app.UseEndpoints(endpoints =>
 {
     endpoints.MapControllers();
 });
+app.UseOcelot().Wait();
 
 app.Run();
 

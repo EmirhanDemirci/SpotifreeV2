@@ -5,10 +5,10 @@
       "commandName": "Project",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
-        "SPOTIFREE_AUTHSERVICEDB": "Server=spotifree.tplinkdns.com;Initial Catalog=AuthDatabase;User ID=spotifree;Password=543532;encrypt=false;",
+        "SPOTIFREE_AUTHSERVICEDB": "Server=fdemirci.tplinkdns.com;Initial Catalog=AuthDatabase;User ID=spotifree;Password=543532;encrypt=false;",
         "SPOTIFREE_RABBITMQ": "{\"UserName\": \"guest\",\"Password\": \"guest\",\"HostName\": \"localhost\",\"VHost\": \"/\",\"Port\": 5672}"
       },
-      "applicationUrl": "https://localhost:51010"
+      "applicationUrl": "http://localhost:51010"
     }
   }
 }

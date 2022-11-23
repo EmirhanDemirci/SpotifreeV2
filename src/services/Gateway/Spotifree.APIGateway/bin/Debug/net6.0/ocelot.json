@@ -5,8 +5,10 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "spotifree-authservice",
-          "Port": 80
+          //"Host": "spotifree-authservice",
+          //"Port": 80
+          "Host": "localhost",
+          "Port": 51010
         }
       ],
       "UpstreamPathTemplate": "/api/auth/authenticate",
@@ -70,6 +72,6 @@
     }
   ],
   "GlobalConfiguration": {
-    "BaseUrl": "http://localhost:22001"
+    "BaseUrl": "http://localhost:22000"
   }
 }

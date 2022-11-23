@@ -16,10 +16,8 @@ namespace Spotifree.UserService.DataAccess.Data.Repository
         {
             _db = db;
             User = new UserRepository(_db);
-            Profile = new ProfileRepository(_db);
         }
         public IUserRepository User { get; }
-        public IProfileRepository Profile { get; }
 
         public void Save()
         {

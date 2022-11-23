@@ -82,7 +82,5 @@ namespace Spotifree.AuthService.Logic
                 if (hashBytes[i + 16] != hash[i])
                     throw new UnauthorizedAccessException("Invalid password");
         }
-
-
     }
 }
