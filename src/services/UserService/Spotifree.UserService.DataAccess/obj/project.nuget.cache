@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "UjVMCokj8Hh1+L0yVspjDHSvYy/y21IbuXwHJq9CmrXdu8jq/JxCsjs5nkA7cDx45Q8J8FMW0YfW6vNWc1BjPA==",
+  "dgSpecHash": "dAcWt/Kii+rBbgZFuEfxYG6XIqaI/eHc3je0jhKG1iA/NRiJqbg+WAhe6JhLN/88dctNOpD8KLdbvt4iPzUKWg==",
   "success": true,
   "projectFilePath": "C:\\Users\\EmirG\\OneDrive\\Bureaublad\\Spotifree\\src\\services\\UserService\\Spotifree.UserService.DataAccess\\Spotifree.UserService.DataAccess.csproj",
   "expectedPackageFiles": [
